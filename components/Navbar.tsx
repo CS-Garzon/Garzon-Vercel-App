@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Instagram, Menu } from "lucide-react";
+import { Facebook, Instagram, Menu, Figma } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -36,6 +36,9 @@ export function Navbar() {
                 <a href="https://www.instagram.com/jovgarzon/" target="_blank" className="text-zinc-400 hover:text-[#E4405F] transition-colors">
                     <Instagram className="w-5 h-5" />
                 </a>
+                <a href="https://www.figma.com/@CGarzon" target="_blank" className="text-zinc-400 hover:text-[#A259FF] transition-colors">
+                    <Figma className="w-5 h-5" />
+                </a>
             </div>
         </div>
 
@@ -55,13 +58,18 @@ export function Navbar() {
                     </DropdownMenuItem>
                     <div className="h-[1px] bg-zinc-800 my-1" />
                     <DropdownMenuItem asChild className="focus:bg-zinc-800 focus:text-white cursor-pointer">
-                        <a href="https://facebook.com" className="flex items-center gap-2 w-full text-zinc-400">
+                        <a href="https://www.facebook.com/carl.jovit.garzon/" className="flex items-center gap-2 w-full text-zinc-400">
                             <Facebook className="w-4 h-4 text-[#1877F2]" /> Facebook
                         </a>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild className="focus:bg-zinc-800 focus:text-white cursor-pointer">
-                        <a href="https://instagram.com" className="flex items-center gap-2 w-full text-zinc-400">
+                        <a href="https://www.instagram.com/jovgarzon/" className="flex items-center gap-2 w-full text-zinc-400">
                             <Instagram className="w-4 h-4 text-[#E4405F]" /> Instagram
+                        </a>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild className="focus:bg-zinc-800 focus:text-white cursor-pointer">
+                        <a href="https://www.figma.com/@CGarzon" className="flex items-center gap-2 w-full text-zinc-400">
+                            <Figma className="w-4 h-4 text-[#A259FF]" /> Figma
                         </a>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
