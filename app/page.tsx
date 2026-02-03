@@ -48,7 +48,7 @@ function DigitalClock() {
 }
 
 export default function TodoApp() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<any[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -70,7 +70,7 @@ export default function TodoApp() {
     }
   }, [tasks, isClient]);
 
-  const addTask = (e) => {
+  const addTask = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim()) {
       setError(true);
@@ -86,15 +86,15 @@ export default function TodoApp() {
     setError(false);
   };
 
-  const toggleTask = (id) => {
+  const toggleTask = (id: string) => {
     setTasks(tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t));
   };
 
-  const deleteTask = (id) => {
+  const deleteTask = (id: string) => {
     setTasks(tasks.filter(t => t.id !== id));
   };
 
-  const handleDragEnd = (result) => {
+  const handleDragEnd = (result: any) => {
     if (!result.destination) return;
     const items = Array.from(tasks);
     const [reorderedItem] = items.splice(result.source.index, 1);
@@ -102,7 +102,7 @@ export default function TodoApp() {
     setTasks(items);
   };
 
-  const openDeleteModal = (type) => {
+  const openDeleteModal = (type: string) => {
     setDeleteType(type);
     setIsModalOpen(true);
   };
