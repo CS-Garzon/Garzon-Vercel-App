@@ -53,7 +53,7 @@ export default function TodoApp() {
   const [error, setError] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
-  const [deleteType, setDeleteType] = useState(null);
+  const [deleteType, setDeleteType] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Load Tasks from LocalStorage
