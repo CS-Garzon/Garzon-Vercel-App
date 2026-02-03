@@ -12,11 +12,9 @@ import {
 
 export function Navbar() {
   return (
-    // THE ISLAND CONTAINER
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <nav className="bg-[#1a1a1e]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-2xl w-full max-w-2xl">
-        
-        {/* LEFT: BRANDING */}
+    
         <Link 
             href="/" 
             className="font-black text-white tracking-tighter text-lg hover:text-zinc-300 transition-colors"
@@ -24,13 +22,11 @@ export function Navbar() {
             GARZON
         </Link>
 
-        {/* CENTER/RIGHT: DESKTOP NAV (Hidden on Mobile) */}
         <div className="hidden md:flex items-center gap-6">
             <Link href="/about" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors">
                 About Me
             </Link>
             
-            {/* Divider Line */}
             <div className="h-4 w-[1px] bg-zinc-700" />
             
             <div className="flex gap-4">
@@ -43,7 +39,6 @@ export function Navbar() {
             </div>
         </div>
 
-        {/* RIGHT: MOBILE BURGER (Visible ONLY on Mobile) */}
         <div className="md:hidden">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
