@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 
 const photos = [
-  "/GARZON_wow.jpg",
+  "/GARZON_WOW.jpg",
   "/GARZON_SHEESH.jpg",
   "/GARZON_CSSEC.jpg",
   "/GARZON_AWWW.jpg",
